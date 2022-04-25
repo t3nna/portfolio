@@ -1,0 +1,219 @@
+@use "colors";
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+
+// color themes
+//:root{
+//  --bg: colors.$white-main;
+//  --page-title: colors.$purple-900;
+//  //--sub-title: colors.$purple-400;
+//  --sub-title: #BE93FD;
+//  --text: var(colors.$gray-dark);
+//  --buttons: var(colors.$purple-500);
+//}
+//
+//
+//[data-theme='dark']{
+//  --bg: colors.$dark-main;
+//  --page-title: colors.$white-main;
+//  //--sub-title: var(colors.$purple-100);
+//  --sub-title: colors.$purple-100;
+//  --text: var(colors.$white-text);
+//  --buttons: var(colors.$purple-300);
+//
+//}
+
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+
+}
+
+
+/* Remove list styles on ul, ol elements  */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  //min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Epiogue', sans-serif;
+  position: relative;
+  margin: 0 auto;
+  max-width: 90rem;
+  transition: colors.$theme-transition;
+
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+//headers styling
+h1{
+  font-weight: 800;
+  font-size: clamp(2.5rem, 6.5vw, 4rem);
+}
+
+h2{
+  font-weight: 700;
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  color: var(--sub-title);
+}
+
+h3{
+  font-weight: 600;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+
+}
+
+//
+.bookmark {
+  color: inherit;
+  transition: all;
+  position: relative;
+
+  &::after {
+    content: ' #';
+    position: absolute;
+    left: calc(100% + 0.5rem);
+    opacity: 0;
+    transition: opacity linear 150ms;
+  }
+
+}
+
+.link{
+  color: colors.$purple-300;
+  &:hover{
+    text-decoration: underline;
+    color: colors.$purple-400;
+  }
+  &:focus{
+    text-decoration: underline;
+  }
+}
+
+.index-page{
+  background-color: var(--alt-bg);
+  transition: colors.$theme-transition;
+}
+
+
+.section{
+  background-color: inherit;
+  color: var(--page-title);
+  padding-top: 70px;
+  position: relative;
+}
+
+// Max width of teh page
+.page-wrapper{
+  max-width: 90rem;
+}
+
+// =====================
+
+// subpages layout
+.about .main, .work .main, .works .main, .contact .main {
+  max-width: 40rem;
+  margin-inline: auto;
+  padding: calc(70px) 1rem 0;
+}
+
+// button link
+
+.button-link{
+  border: none;
+  outline: none;
+  background-color: #a7e0f1;
+  color: #1C1A1D;
+  padding: 0.5em 1.5em;
+  display: flex;
+  border-radius: 6px;
+
+  &:hover{
+    background-color: #7fb8c9;
+  }
+}
+
+.button-link-arrow-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+
+  svg{
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.footer{
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--gray);
+  font-size: 0.875rem;
+}

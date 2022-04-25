@@ -1,0 +1,76 @@
+@use "colors";
+
+.contact{
+  background-color: var(--alt-bg);
+  color: var(--alt-text);
+
+  //transition:  colors.$theme-transition;
+}
+
+.contact-title{
+  padding: 1.5rem 0;
+}
+
+.contact-form{
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+.contact-form__input {
+  //padding-bottom: 1.5rem;
+  //gap: 1.5rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  textarea{
+    min-height: 15rem;
+  }
+
+  input, textarea {
+    font-size: 1.2rem;
+    padding: 1rem .6rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--input);
+    outline: none;
+    color: var(--text);
+    max-height: 20rem;
+    background-color: var(--alt-button);
+    &:focus {
+      border: 2px solid var(--alt-title);
+    }
+
+
+
+    &::placeholder{
+      color: rgba(143, 142, 138, .4)
+    }
+  }
+}
+
+.contact-form__input textarea{
+  resize: vertical;
+  min-height: 5rem;
+}
+
+//.contact-form__input {
+//  background-color: white;
+//  border-radius: 6px;
+//  width: 100%;
+//  border: 2px solid var(--gray);
+//  padding: .8em 2.4em;
+//  color: var(--alt-text);
+//  font-size: 1.25rem;
+//
+//  &:hover {
+//    //background-color: $pink;
+//    border: 2px solid var(--gray);
+//    //color: white;
+//  }
+//
+//}

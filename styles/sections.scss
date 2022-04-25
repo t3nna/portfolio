@@ -1,0 +1,306 @@
+@use "colors";
+// color themes
+
+[data-theme='dark']{
+  --bg: var(colors.$dark-main);
+  --page-title: var(colors.$white-main);
+  --sub-title: var(colors.$purple-100);
+  --text: var(colors.$white-text);
+  --buttons: var(colors.$purple-300);
+
+}
+
+[data-theme='light']{
+  --bg: var(colors.$white-main);
+  --page-title: var(colors.$purple-900);
+  --sub-title: var(colors.$purple-400);
+  --text: var(colors.$gray-dark);
+  --buttons: var(colors.$purple-500);
+}
+
+
+
+.grid-container {
+  display: grid;
+  margin: 0 3.5rem;
+  gap: 1.25rem;
+  grid-auto-columns: 1fr;
+
+  grid-template-areas:
+  'header'
+  'image'
+  'description'
+  'footer';
+}
+
+.section__footer {
+  grid-area: footer;
+}
+
+.section__header {
+  grid-area: header;
+}
+
+.section__description {
+  grid-area: description;
+}
+
+.section__image {
+  grid-area: image;
+}
+
+@media screen and (min-width: 40em) {
+  .grid-container {
+    grid-template-areas:
+    'header image'
+    'description image '
+    'footer footer';
+  }
+  .project-section{
+    .grid-container {
+      grid-template-areas:
+    '. header '
+    'image description  '
+    'footer footer';
+    }
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .grid-container {
+    grid-template-areas:
+    'header image'
+    'description image'
+    'footer footer';
+  }
+
+  .project-section {
+    .grid-container {
+      grid-template-areas:
+    'header .'
+    'image description '
+    'footer .'
+    }
+  }
+}
+
+@media screen and (min-width: 60em){
+  .grid-container {
+    grid-template-areas:
+    'header image'
+    'description image'
+    'footer image';
+  }
+}
+
+// end grid ==========================
+
+.section__header {
+  padding-top: 1rem;
+
+  h3{
+    color: var(--sub-title);
+  }
+}
+
+.section__image {
+
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+
+
+}
+
+.scroll-arrows{
+  position: absolute;
+  left: 1rem;
+  top: calc(50% - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(50%);
+
+}
+
+.arrow-top svg, .arrow-bottom svg{
+  fill: var(--buttons);
+
+  transition: transform 150ms ease-in-out, fill 150ms linear, stroke 200ms linear;
+
+  &:hover{
+  fill: var(--sub-title);
+  }
+
+}
+
+.arrow-top:hover svg{
+  transform: translateY(-1rem);
+}
+
+.arrow-bottom:hover svg{
+  transform: translateY(1rem);
+}
+
+
+
+.section__description {
+  padding-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  color: var(--text)
+
+}
+
+
+
+.section__footer {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.more svg{
+  fill: var(--buttons);
+
+  &:hover{
+
+  fill: var(--sub-title);
+  }
+}
+
+.more h6{
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: -0.5rem;
+}
+
+.follow{
+  font-size: 1.25rem;
+  margin-top: 0.75rem;
+  color: var(--sub-title)
+}
+
+.social-links{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+.icon svg{
+  width: 22px;
+  height: 22px;
+  fill: var(--page-title);
+}
+.instagram svg{
+  fill: none;
+  stroke: var(--page-title);
+}
+
+
+// link arrow
+
+
+.section__footer {
+  svg {
+    position: relative;
+  }
+
+  svg, #move, #line, #arrow-top, #arrow, #not-move {
+    cursor: pointer;
+    transition: transform 250ms ease-in-out, width 250ms ease-in-out,
+    opacity 250ms linear, fill 200ms linear, stroke 200ms linear;
+  ;
+
+  }
+
+
+  svg:hover #move {
+
+    //fill: red;
+    transform: translateX(-.85rem);
+    opacity: .8;
+
+    /*#line{*/
+    /*    fill: red;*/
+    /*    width: 65px;*/
+    /*}*/
+    /*#arrow-top{*/
+    /*    transform: translateX(-2rem);*/
+    /*}*/
+
+  }
+
+  svg:hover #arrow-top {
+    transform: translateX(-1.5rem);
+  }
+
+  svg:hover #line {
+    width: 50px;
+    transform: translateX(5px);
+  }
+
+  svg:hover #not-move {
+    transform: translateX(-0.25rem);
+    opacity: .6;
+
+  }
+
+
+}
+
+// media queries
+
+@media screen and (min-width: 40em) {
+  .section__header {
+    padding-top: 4rem;
+  }
+  .section__image {
+    padding-top: 4rem;
+    max-width: 100%;
+  }
+
+  .section__footer {
+    justify-content: space-between;
+  }
+  .follow{
+    margin-top: 4rem;
+  }
+
+
+
+
+  .project-section {
+    .section__image {
+      padding: 0;
+    }
+
+    .section__description {
+      margin: auto 0;
+
+    }
+  }
+
+}
+
+@media screen and (min-width: 50em) {
+  .section__description {
+    padding: 4rem 0;
+    font-size: 1.375rem;
+  }
+  .section__image{
+    max-width: 500px;
+  }
+
+  .project-section {
+    .section__description {
+      padding: 0;
+
+      p {
+        max-width: 100%;
+
+      }
+
+    }
+  }
+}

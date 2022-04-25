@@ -1,0 +1,54 @@
+@use "colors";
+
+.work{
+  background-color: var(--alt-bg);
+  transition: colors.$theme-transition ;
+}
+
+
+.work-header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 1.25rem;
+
+}
+
+.work-description{
+  margin-block: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+
+.work-properties{
+  margin-block: 1.5rem;
+  >p{
+    margin: 1rem;
+  }
+
+}
+
+.work-images{
+  margin-top: 1.5rem;
+  img{
+    border-radius: 2px;
+  }
+
+}
+.work-images .work-image + .work-image{
+  margin-top: 1rem;
+}
+
+
+
+
+
+.highlight{
+  background-color: var(--alt-button);
+  color: var(--bg);
+  display: inline-block;
+  padding: 0.375em 1.125em;
+  border-radius: 6px;
+}
+
