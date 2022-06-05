@@ -15,6 +15,7 @@ export default function Works() {
         <div className={' works'}>
             <Main>
                 <LogoImage text={'This are my works!'}/>
+                <h1 className={'page-title'}>My projects</h1>
                 <ul className="works-grid">
                     <li className={'works-grid__item'}>
                         <Image

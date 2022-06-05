@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Main from "../../components/Main";
 import AboutHeader from "../../components/AboutHeader";
@@ -28,12 +29,13 @@ export default function Watchlist() {
 
                 </div>
                 <div className="work-properties">
-                    <p><strong className={'highlight'}>Lorem</strong> ipsum dolor sit amet, consectetur adipisicing
-                        elit. Fugiat, necessitatibus!</p>
-                    <p><strong className={'highlight'}>Lorem</strong> ipsum dolor sit amet, consectetur adipisicing
-                        elit. Fugiat, necessitatibus!</p>
-                    <p><strong className={'highlight'}>Lorem</strong> ipsum dolor sit amet!</p>
-                    <p><strong className={'highlight'}>Lorem</strong> ipsum dolor sit amet!</p>
+                    <p><strong className={'highlight'}>Platform</strong> WEB</p>
+                    <p><strong className={'highlight'}>Stack</strong> React, Firebase, TMDB Api</p>
+                    <p><strong className={'highlight'}>Website</strong>
+                        <Link href={'https://thirsty-noyce-827daa.netlify.app'}>
+                            <a> link to my website</a>
+                    </Link>
+                    </p>
                 </div>
 
                 <div className="work-images">

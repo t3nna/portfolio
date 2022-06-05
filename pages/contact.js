@@ -1,16 +1,36 @@
-import {useState} from "react";
+import React, {useRef, useState} from "react";
+import Link from "next/link";
+import {useRouter} from 'next/router'
+import emailjs from '@emailjs/browser';
 
 
 import Main from "../components/Main";
 import Footer from "../components/Footer";
 import LogoImage from "../components/LogoImage";
-import Link from "next/link";
+
 
 export default function Contact() {
+    const router = useRouter()
+    const form = useRef();
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        emailjs.sendForm('service_1yu8aqk', 'template_skz5h46', form.current, 'user_Isyyg0joAYFDeFnoC1WZD')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+        router.push('/')
+
+    }
+
+
     const initialState = {
         name: '',
         email: '',
-        title: '',
+        subject: '',
         message: ''
 
     }
@@ -33,15 +53,23 @@ export default function Contact() {
         <div className={'contact'}>
             <Main>
                 <LogoImage/>
-                <h1 className={'contact-title'}>Contact</h1>
-                <form className="contact-form">
+                <h1 className={'page-title'}>Contact</h1>
+                <form className="contact-form" onSubmit={event => handleClick(event)} ref={form}>
                     <div className="contact-form__input">
                         <label htmlFor="phone-number">Name Surname</label>
                         <input type="text"
                                value={userInfo.name}
                                required={true}
                                onChange={(e) => handleInputs(e)}
-                               name={'name'} id={'phone-number'} placeholder={'Name, Surname'}/>
+                               name={'name'} id={'name'} placeholder={'Name, Surname'}/>
+                    </div>
+                    <div className="contact-form__input">
+                        <label htmlFor="phone-number">Subject</label>
+                        <input type="text"
+                               value={userInfo.subject}
+                               required={true}
+                               onChange={(e) => handleInputs(e)}
+                               name={'subject'} id={'subject'} placeholder={'Subject'}/>
                     </div>
 
 

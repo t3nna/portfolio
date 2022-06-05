@@ -11,7 +11,7 @@ export default function LogoImage({text = 'Hello I’m front-end developer based
                 height={9}
                 layout={'responsive'}
             />
-            <div className="about-main-image__overlap-text">
+            <div className="main-image__overlap-text">
                 <p>
                     {text}
                 </p>

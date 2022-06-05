@@ -34,10 +34,11 @@ export default function IntroduceSection({color}) {
 
                 <main className="section__description">
                     <p>
-                        Them days living set days yielding first lights great light i seed place of behold dominion
-                        morning
-                        fruit moved, fourth unto beginning.
-                        Days midst.
+                        {/* eslint-disable-next-line react/no-unescaped-entities */}
+                        Hi, my name is Ivan and I'm from Ukraine. I am a developer with experience in building websites
+                        for small and medium sized businesses.I can do simple or complex development solution using
+                        {/* eslint-disable-next-line react/no-unescaped-entities */}
+                        various API's and technologies, specifically React.
                     </p>
                 </main>
 

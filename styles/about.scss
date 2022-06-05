@@ -15,7 +15,7 @@
   position: relative;
 }
 
-.about-main-image__overlap-text {
+.main-image__overlap-text {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -30,8 +30,8 @@
     margin-inline: auto;
     margin-bottom: 0.5rem;
 
-    background-color: rgba(241, 204, 255, 0.5);
-    color: colors.$white-alt;
+    background-color: rgba(239, 229, 245, 0.75);
+    color: colors.$gray-dark;
     border-radius: 6px;
 
     font-size: 1.125rem;
@@ -48,11 +48,6 @@
   align-items: center;
   margin: 1.5rem 0;
 
-
-  h1{
-    font-weight: 700;
-    font-size: clamp(2.25rem, 6.5vw, 3.5rem);
-  }
   h4{
     font-weight: 300;
     font-size: 1.125rem;

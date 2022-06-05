@@ -28,29 +28,49 @@ export default function About() {
 
                     <section>
                         <h3>Bio</h3>
-                        <p><strong>2005</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam nam
-                            natus numquam
-                            recusandae similique sit unde. </p>
-                        <p><strong>2005</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam nam
-                            natus numquam
-                            recusandae similique sit unde. </p>
-                        <p><strong>2005</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam nam
-                            natus numquam
-                            recusandae similique sit unde. </p>
+                        <p><strong>2005</strong>Born in Kyiv, Ukraine. </p>
+                        <p><strong>2020</strong>I started to learn programming. Also this year I got opportunity to
+                            study abroad in Poland
+                            . Whole year I was studying computer science.</p>
+                        <p><strong>2022</strong>After returning to Ukraine the war had started. Instantly I packed and
+                            moved to Poland.</p>
                     </section>
                     <section>
                         <h3>Hobbies</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum dignissimos dolore est, et
-                            mollitia pariatur quod recusandae rem voluptas.</p>
+                        <p>Art, Music, Playing Guitar, Photography, Reading</p>
                     </section>
                     <section>
                         <h3>Hard Skills</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque, voluptatum? Aut
-                            est explicabo inventore officia quidem sed sint veniam? Adipisci aspernatur, dolore
-                            explicabo itaque iure mollitia quos rem. Accusamus commodi id nam neque repudiandae tempore
-                            unde velit voluptatum. Atque cupiditate modi odio qui voluptate.</p>
-
+                        <p>JS, HTML, CSS(SCSS);</p>
+                        <p>NODE, REACT, NEXT, TS, EXPRESS, FIREBASE;</p>
+                        <p>FIGMA; GIT. </p>
                     </section>
+                    <section>
+                        <h3>What can I offer to you?</h3>
+                        <p>
+                            I have a passion for building engaging websites, that focus on user experience, content and
+                            design.
+                        </p>
+                        <p>
+                            Do you need website for your business? Custom coding solutions to reach specific goals?
+                            Specific application?
+                        </p>
+                        <p>I am ready to face your problems and solve them.</p>
+                    </section>
+
+                    <section>
+                        <h3>Why choose me?</h3>
+                        <p>
+                            For clear and effective communication in 4 different languages.
+                        </p>
+                        <p>
+                            I want to create real, lasting, personalised results for you and your business.
+                        </p>
+                        <p>
+                            I am a very sociable and active person. Ready to work and interact with the team.
+                        </p>
+                    </section>
+
                     <section className="on-the-web">
                         <h3>On the web</h3>
                         <div className="about-social-links">
@@ -97,7 +117,7 @@ export default function About() {
                     </section>
 
                 </div>
-            <Footer/>
+                <Footer/>
             </Main>
         </div>
     )

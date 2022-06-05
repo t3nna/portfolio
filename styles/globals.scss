@@ -188,7 +188,7 @@ h3{
 .button-link{
   border: none;
   outline: none;
-  background-color: #a7e0f1;
+  background-color: #b5e2f6;
   color: #1C1A1D;
   padding: 0.5em 1.5em;
   display: flex;
@@ -216,4 +216,11 @@ h3{
   padding: 1rem 0;
   color: var(--gray);
   font-size: 0.875rem;
+}
+
+
+.page-title{
+  margin: 1.5rem 0;
+  color: var(--page-title);
+  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
 }

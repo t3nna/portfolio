@@ -11,7 +11,7 @@ export default function AboutHeader() {
             <LogoImage/>
             <div className="about-header-info">
                 <div className="about-header-info__name">
-                    <h1>Ivan Melnyk</h1>
+                    <h1 className={'page-title'}>Ivan Melnyk</h1>
                     <h4>(Developer / Designer / Musician )</h4>
                 </div>
                 <div className="about-header-info__image">
